@@ -1,0 +1,391 @@
+body{
+    font-size: 18px;
+    background: rgba(183, 215, 219, 0.788);
+    background-image: url('imagenes/fPantalla.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+.container{
+    margin: auto;
+    width: 960px;
+    height: 850px;
+    padding: 5px;
+}
+.logo{
+    width: 100%;
+    float: left;
+    padding: 5px 0;
+    margin-bottom: 20px;
+}
+/* ==> css para el modal <== */
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    /* -o-transform: translateY(-100vh);
+    -o-transition: transform .8s; */
+}
+.m__mostrar{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    /* -o-transform: translateY(0); */
+    /* -o-transition: transform .8s .8s; */
+}
+.modal__contenedor{
+    margin: auto;
+    width: 60%;
+    max-width: 600px;
+    max-height: 60%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    /* -o-transform: var(-o-transform);
+    -o-transition: var(-o-transition); */
+}
+.m__titulo{
+    font-size: 2.5rem;
+}
+.m__texto{
+    margin-bottom: 10px;
+}
+.modal__img{
+    width: 90%;
+    max-width: 300px;
+}
+.m_items:before{
+    content: "✪ ";
+    /* content: "&check"; */
+}
+.m__cerrar{
+    text-decoration: none;
+    color: #fff;
+    background-color: #F26250;
+    padding: 1em 3em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+.m__cerrar:hover{
+    color: #F26250;
+    background-color: #fff;
+}
+
+/* ==> css para el modal <== */
+
+.info{
+    float: left;
+    display: block;
+    margin-top: 5%;
+    height: 45px;
+    border-radius: 50%;
+    background: rgb(251, 255, 6);
+    text-shadow: 1px 1px rgb(226, 12, 12);
+}
+.left{
+    float: left;
+    width: 55%;
+    height: auto;
+    border-radius: 24px;
+}
+.derecha{
+    float: right;
+    width: 30%;
+    height: auto;
+    border-radius: 24px;
+    background: white;
+}
+.left-button{
+    float: left;
+    width: 70%;
+    height: auto;
+    border-radius: 24px;
+}
+.left-button p{
+    margin-left: 90px;
+    margin-bottom: 25px;
+    color: aliceblue;
+}
+.logoIma{
+    margin-top: 1%;
+    float: inherit;
+    margin-left: 5%;
+}
+.titulo{
+    float: inherit;
+    color: aqua;
+    margin-left: 15%;
+    margin-top: 1%;
+    font-size: 28px;
+    font-weight: bold;
+}
+#textoEntrada{
+    float: left;
+    margin: 10% 0 10% 10%;
+    width: 80%;
+    height: 80%;
+    color: #79dd27;
+    font-size: 20px;
+    resize: none;
+    border: none;
+    outline: none;
+    background: rgba(183, 215, 219, 0.088);
+}
+.cargador{
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    margin: 10% 0 10% 10%;
+    width: 32%;
+    height: 37%;
+    top: 0px;
+    left: 240px;
+    background: #79dd27;
+}
+.mostrar_cargador{
+    opacity: 1;
+    pointer-events: unset;
+}
+#imaDerecha{
+    margin-top: 20%;
+    margin-left: 2%;
+    width: 90%;
+    height: auto;
+}
+#textoRef{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 28px;
+    font-weight: bold;
+}
+#textoSalida{
+    float: left;
+    margin-left: 10%;
+    margin-top: 20px;
+    color: #0A3871;
+    width: 80%;
+    height: 60%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+#encriptar, #limpiar{
+    padding: 24px;
+    width: 20%;
+    height: 60%;
+    border-radius: 24px;
+    margin-left: 5%;
+    background: #0A3871;
+}
+#limpiar{
+    padding: 24px;
+    width: 20%;
+    height: 60%;
+    border-radius: 24px;
+    margin-left: 5%;
+    background: #6fc3ce;
+    
+}
+#desencriptar{
+    padding: 24px;
+    width: 20%;
+    height: 60%;
+    border-radius: 24px;
+    margin-left: 5%;
+    background: #D8DFE8;
+}
+#copiar{
+    margin-left: 33%;
+    margin-top: 90%;
+    margin-bottom: 10px;
+    padding: 24px;
+    width: 40%;
+    height: 10%;
+    background: #D8DFE8;
+    border-radius: 24px;
+    display: none;
+}
+footer{
+    margin-top: auto;
+    color: rgb(8, 240, 27);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    background-image: url('imagenes/fondo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+/* Estilos para visualizacion en una tablet de hasta 850px */
+
+@media screen and (max-width:850px) {
+    body{
+        margin: 2px auto;
+        background-image: url('imagenes/fTablet.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .container, .left, .derecha, .left-button, #textoSalida{
+        width: 100%;
+    }
+    .container{
+        height: 1151px;
+    }
+    .info{
+        display: none;
+    }
+    .titulo{
+        color: #0A3871;
+    }
+    .derecha{
+        float: none;
+        position: absolute;
+        top: 701px;
+        left: 30px;
+        right: 5px;
+        width: 95%;
+        margin: 10px auto;
+    }
+    #textoEntrada{
+        color:#084288
+    }
+    #imaDerecha{
+        display: none;
+    }
+    .left-button p{
+        color: #0A3871;
+    }
+    #textoRef{
+        text-align: center;
+    }
+    #textoSalida{
+        margin: 10px auto;
+        width: 98%;
+    }
+    #copiar{
+        margin: 20px auto;
+        position: absolute;
+        left: 220px;
+        bottom: 10%;
+    }
+    .left-button{
+        float: none;
+        position: absolute;
+        top: 570px;
+        left: 40px;
+    }
+    .modal__contenedor{
+        padding: 2em 1.5em;
+    }
+    .m__titulo{
+        font-size: 2rem;
+    }
+    footer{
+        width: 100%;
+    }
+}
+
+/* Estilos para visualizacion en un smartphone hasta 6" */
+
+@media screen and (max-width:640px){
+    body{
+        background-image: url('imagenes/fCelular.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .logo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logoIma{
+        float: none;
+        display: block;
+        margin: 5% auto;
+    }
+    .info{
+        display: none;
+    }
+    
+    .derecha{
+        float: none;
+        position: absolute;
+        top: 781px;
+        left: 5px;
+        right: 1px;
+        width: 90%;
+        margin: 1px 1%;
+    }
+    #imaDerecha{
+        display: none;
+    }
+    #textoEntrada{
+        margin: 1% 0 1% 1%;
+        width: 90%;
+    }
+    
+    .left-button{
+        width: 90%;
+        height: auto;
+        border-radius: 24px;
+        margin: 10px auto;
+        float: none;
+        position: absolute;
+        top: 470px;
+        left: 5px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .left-button p{
+        text-align: left;
+        margin: 5px auto;
+        color:rgb(8, 240, 27);
+    }
+    #encriptar, #desencriptar, #limpiar{
+        margin-left: 5%;
+        width: 80%;
+    }
+    #copiar{
+        margin: 20px auto;
+        position: absolute;
+        left: 100px;
+        bottom: 5%;
+    }
+    footer{
+        width: 100%;
+        margin: 5px 5px;
+    }
+    footer p{
+        font-size: .9em;
+    }
+}

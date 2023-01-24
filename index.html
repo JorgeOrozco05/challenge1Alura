@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 1 Alura-ONE</title>
+    <link rel="stylesheet" href="resetcss.css">
+    <link rel="stylesheet" href="estiloNuevo.css">
+    <script defer src="funcionesJS.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img class="logoIma" src="imagenes/Vector.png" alt="Logo de Alura">
+            <h1 class="titulo">ENCRIPTADOR DE MENSAJES JOROZBA</h1>
+        </div>
+        <!-- Modal -->
+        <section class="modal">
+            <div class="modal__contenedor">
+                <img class="modal__img" src="imagenes/candado.jpg" width="60px" height="80px">
+                <h2 class="m__titulo">Instrucciones:</h2>
+                <p class="m__texto">
+                    Bienvenido a su encriptador/desencriptador, para aprovechar esta herramienta sigan las siguientes instrucciones:
+                    <ul class="m__lista">
+                        <li class="m_items">Escribe tu mensaje en el campo indicado.</li>
+                        <li class="m_items">No utilices mayúsculas.</li>
+                        <li class="m_items">No utilices acentos o símbolos especiales.</li>
+                        <li class="m_items">Presiona encriptar o desencriptar según requieras.</li>
+                        <li class="m_items">Tienes la opción de copiar tu mensaje de salida al portapapeles.</li>
+                    </ul>
+                </p>
+                <a href="#" class="m__cerrar">Cerrar</a>
+            </div>
+        </section>
+        <!-- Fin del modal -->
+        
+        
+        <button type="button" class="info">INSTRUCCIONES</button>
+        <div class="left">
+            <textarea name="textoEntrada" id="textoEntrada" cols="30" rows="10" placeholder="Ingrese el texto aqui..."></textarea>
+            <!-- <div class="cargador" id="load"><video src="imagenes/video2.mp4#t=3" controls muted width="100%" height="100%" loop></video></div>Carga del encriptador -->
+        </div>
+        <div class="derecha">
+            <img id="imaDerecha" src="imagenes/ocultaTexto.png" alt="Niño buscando estrellas">
+            <h1 id="textoRef">Ningun mensaje fue encontrado</h1>
+            <textarea name="textoSalida" id="textoSalida" cols="30" rows="10" disabled>Ingrese el texto que deseas encriptar o desencriptar</textarea>
+            <button type="button" id="copiar" name="copiar">Copiar</button>
+        </div>
+        <div class="left-button">
+            <p>⚠ Solo minusculas y sin acentos</p> <!--<img src="imagenes/advertencia.png" alt="simbolo de advertencia">-->
+            <button type="button" id="encriptar">Encriptar</button>
+            <button type="button" id="limpiar">Borrar</button>
+            <button type="button" id="desencriptar">Desencriptar</button>
+        </div>
+    </div>
+    
+    <footer>
+        <img src="imagenes/Vector.png" alt="logo de alura">
+        <h2>Alura ONE Academy</h2>
+        <p>© Derechos reservados - Autor Jorge Orozco Barragán</p>
+    </footer>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
