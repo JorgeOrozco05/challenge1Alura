@@ -61,7 +61,7 @@ function limpiar(){
 
 var msg = document.getElementById("textoEntrada");
 function alertar(){
-    if (/[A-Z0-9]/g.test(msg.value)||/[ñÑáéíóúÁÉÍÓÚ]/g.test(msg.value)||/['|°¬!^`~"#$%&/()Çç=?¿{}_,.´+<>¡¨*:;]/gi.test(msg.value)){
+    if (/[A-Z0-9]/g.test(msg.value)||/[àèìòùÀÈÌÒÙñÑáéíóúÁÉÍÓÚ]/g.test(msg.value)||/['|°¬!^`~"#$%&/()Çç=?¿{}_,.´+<>¡¨*:;]/gi.test(msg.value)){
         console.log(msg.value);
         msg.value = "";
         alert("Recuerde solo ingresar texto en minuscula y sin acentos");
