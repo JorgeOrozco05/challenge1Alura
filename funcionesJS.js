@@ -1,12 +1,12 @@
 
-const load = document.querySelector(".cargador");
+// const load = document.querySelector(".cargador");
 
 function encriptar(){
     let msg = document.getElementById("textoEntrada");
     var msgEncriptado = msg.value.replaceAll("e","enter")
     .replaceAll("i","imes").replaceAll("a","ai").replaceAll("o","ober")
     .replaceAll("u","ufat");
-    load.classList.remove("mostrar_cargador");
+    //load.classList.remove("mostrar_cargador");
     document.getElementById("imaDerecha").style.display="none";
     document.getElementById("textoRef").style.display="none";
     document.getElementById("textoSalida").innerHTML = msgEncriptado;
@@ -23,7 +23,7 @@ function desencriptar(){
     var msgEncriptado = msg.value.replaceAll("enter","e")
     .replaceAll("imes","i").replaceAll("ai","a").replaceAll("ober","o")
     .replaceAll("ufat","u");
-    load.classList.remove("mostrar_cargador");
+    //load.classList.remove("mostrar_cargador");
     document.getElementById("imaDerecha").style.display="none";
     document.getElementById("textoRef").style.display="none";
     document.getElementById("textoSalida").value = msgEncriptado;
@@ -68,11 +68,11 @@ function alertar(){
         } 
 }
 
-function mostrarCargador() {
-    if(texEntrada.value != ""){
-        load.classList.add("mostrar_cargador");
-    }
-}
+// function mostrarCargador() {
+//     if(texEntrada.value != ""){
+//         load.classList.add("mostrar_cargador");
+//     }
+// }
 
 var ctrl;
 var ctrl1;
@@ -92,9 +92,9 @@ function desencriptadoRetrasado(){
         ctrl1 = setTimeout(desencriptar, 3000);
     }
 }
-function loader(){
-    ctrl2 = setTimeout(desencriptar, 2900);
-}
+// function loader(){
+//     ctrl2 = setTimeout(desencriptar, 2900);
+// }
 
 
 const texEntrada = document.getElementById("textoEntrada");
@@ -105,9 +105,9 @@ const clear = document.getElementById("limpiar");
 
 
 texEntrada.addEventListener("keyup",alertar);
-btnEncriptar.addEventListener("click",mostrarCargador);
+//btnEncriptar.addEventListener("click",mostrarCargador);
 btnEncriptar.addEventListener("click",encriptadoRetrasado);
-btnDesencriptar.addEventListener("click",mostrarCargador);
+//btnDesencriptar.addEventListener("click",mostrarCargador);
 btnDesencriptar.addEventListener("click", desencriptadoRetrasado);
 btnCopiar.addEventListener("click",copiar);
 clear.addEventListener("click",limpiar);
